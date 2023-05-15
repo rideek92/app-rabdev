@@ -1,21 +1,19 @@
-import React, { useState } from 'react';
-import { button, polish, english } from './actionbutton.module.sass';
+import { useContext } from 'react';
+import { button } from './actionbutton.module.sass';
+import AppContext from '@/components/context/AppContext';
 
 export default function ActionButton() {
-  const [languige, setLanguige] = useState('PL');
-  const changeLanguige = () => {
-    if (languige === 'PL') {
-      setLanguige('EN');
+  const context = useContext(AppContext);
+  const changeLangugie = () => {
+    if (context.languige === 'PL') {
+      context.setlanguge('EN');
     } else {
-      setLanguige('PL');
+      context.setlanguge('PL');
     }
   };
   return (
-    <div className={button}>
-      <div
-        onClick={changeLanguige}
-        className={languige === 'PL' ? polish : english}
-      />
+    <div className={button} onClick={changeLangugie}>
+      <div />
     </div>
   );
 }

@@ -1,9 +1,11 @@
 import Link from 'next/link';
+import { useContext } from 'react';
 import { item, listElement } from './Menu.module.sass';
+import AppContext from '@/components/context/AppContext';
 
 const nav = [
   {
-    pl: 'moje projekty',
+    pl: 'projekty',
     en: 'my projects',
     link: '/',
     active: true,
@@ -21,10 +23,10 @@ const nav = [
     active: true,
   },
   {
-    pl: 'moje umiętności',
+    pl: 'umiętności',
     en: 'my skills',
     link: '/skills',
-    active: true,
+    active: false,
   },
   {
     pl: 'blog',
@@ -36,11 +38,13 @@ const nav = [
     pl: 'kontakt',
     en: 'concact',
     link: '/concact',
-    active: true,
+    active: false,
   },
 ];
 
 export default function Menu() {
+  const context = useContext(AppContext);
+
   return (
     <>
       <ul className={listElement}>
@@ -49,7 +53,7 @@ export default function Menu() {
             ''
           ) : (
             <Link key={element.link} href={element.link} className={item}>
-              {element.en}
+              {context.languige === 'PL' ? element.pl : element.en}
             </Link>
           )
         )}
