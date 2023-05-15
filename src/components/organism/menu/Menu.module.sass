@@ -1,0 +1,28 @@
+.listElement
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+
+.item
+  font-size: 15px
+  font-weight: 300
+  margin-top: 5px
+  margin-bottom: 5px
+  padding: 4px 0 4px 30px
+  color: white
+  text-decoration: none
+  transform: translateX(-10px)
+  &:hover
+    width: 80%
+    background-color: white
+    color: #671164
+    border-radius: 0 10px 10px 0
+    font-weight: 600
+  &:hover::after
+    content: '</>'
+    display: inline-block
+    position: absolute
+    right: 20px
+
+

@@ -1,0 +1,32 @@
+$widthButton: 65px
+$heightButton: 20px
+
+.button
+  width: $widthButton
+  height: $heightButton
+  text-align: center
+  line-height: 20px
+  margin: 0 2px 0 auto
+  background-color: #fff
+  border-radius: 20px
+  position: relative
+  & .polish
+    position: absolute
+    left: 0
+    cursor: pointer
+    height: $heightButton
+    width: $widthButton / 1.75
+    background-color: #671164
+    border-radius: 20px
+
+  & .english
+    position: absolute
+    right: 0
+    cursor: pointer
+    height: $heightButton
+    width: $widthButton / 1.75
+    background-color: #671164
+    border-radius: 20px
+
+
+
