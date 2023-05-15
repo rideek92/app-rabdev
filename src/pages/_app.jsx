@@ -9,9 +9,9 @@ import { mainWrapper } from '../styles/Home.module.sass';
 import AppContext from '@/components/context/AppContext';
 
 export default function App({ Component, pageProps }) {
-  const [languige, setlanguge] = useState('PL');
+  const [pageLanguage, setPageLanguge] = useState('PL');
   return (
-    <AppContext.Provider value={{ languige, setlanguge }}>
+    <AppContext.Provider value={{ pageLanguage, setPageLanguge }}>
       <Wrapper>
         <Navigation />
         <div className={mainWrapper}>

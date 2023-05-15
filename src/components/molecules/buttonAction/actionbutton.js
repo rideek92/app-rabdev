@@ -5,10 +5,10 @@ import AppContext from '@/components/context/AppContext';
 export default function ActionButton() {
   const context = useContext(AppContext);
   const changeLangugie = () => {
-    if (context.languige === 'PL') {
-      context.setlanguge('EN');
+    if (context.pageLanguage === 'PL') {
+      context.setPageLanguge('EN');
     } else {
-      context.setlanguge('PL');
+      context.setPageLanguge('PL');
     }
   };
   return (

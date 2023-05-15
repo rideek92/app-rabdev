@@ -53,7 +53,7 @@ export default function Menu() {
             ''
           ) : (
             <Link key={element.link} href={element.link} className={item}>
-              {context.languige === 'PL' ? element.pl : element.en}
+              {context.pageLanguage === 'PL' ? element.pl : element.en}
             </Link>
           )
         )}
