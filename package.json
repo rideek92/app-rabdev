@@ -10,6 +10,7 @@
     "fix": "next lint --fix"
   },
   "dependencies": {
+    "@hulkhooks/use-localstorage": "^1.0.1",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "13.4.1",

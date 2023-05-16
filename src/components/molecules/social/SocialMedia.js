@@ -33,7 +33,7 @@ export default function SocialMedia() {
     <div className={wrapper}>
       {socials.map((social) =>
         social.active ? (
-          <Link href={social.address} target="_blank">
+          <Link key={social.name} href={social.address} target="_blank">
             <SVGIcon image={social.url} classElement={icon} />
           </Link>
         ) : null

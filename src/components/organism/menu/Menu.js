@@ -26,7 +26,7 @@ const nav = [
     pl: 'umiętności',
     en: 'my skills',
     link: '/skills',
-    active: false,
+    active: true,
   },
   {
     pl: 'blog',
@@ -38,7 +38,7 @@ const nav = [
     pl: 'kontakt',
     en: 'concact',
     link: '/concact',
-    active: false,
+    active: true,
   },
 ];
 

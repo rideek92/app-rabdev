@@ -4,6 +4,7 @@ import AppContext from '@/components/context/AppContext';
 
 export default function ActionButton() {
   const context = useContext(AppContext);
+
   const changeLangugie = () => {
     if (context.pageLanguage === 'PL') {
       context.setPageLanguge('EN');

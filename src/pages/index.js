@@ -7,7 +7,6 @@ export default function Home() {
     <>
       <div>
         <h1>Moje projekty</h1>
-        <h3>{context.pageLanguage}</h3>
       </div>
     </>
   );
