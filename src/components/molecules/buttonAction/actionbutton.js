@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { button } from './actionbutton.module.sass';
+import { button, action } from './actionbutton.module.sass';
 import AppContext from '@/components/context/AppContext';
 
 export default function ActionButton() {
@@ -11,9 +11,41 @@ export default function ActionButton() {
       context.setPageLanguge('PL');
     }
   };
+
   return (
-    <div className={button} onClick={changeLangugie}>
-      <div />
+    <div className={button}>
+      <div
+        style={
+          context.pageLanguage === 'PL'
+            ? {
+                color: 'white',
+                backgroundColor: '#671164',
+                padding: '0 10px',
+                fontSize: '15px',
+              }
+            : null
+        }
+        className={action}
+        onClick={changeLangugie}
+      >
+        PL
+      </div>
+      <div
+        style={
+          context.pageLanguage === 'EN'
+            ? {
+                color: 'white',
+                backgroundColor: '#671164',
+                padding: '0 10px',
+                fontSize: '15px',
+              }
+            : null
+        }
+        className={action}
+        onClick={changeLangugie}
+      >
+        EN
+      </div>
     </div>
   );
 }
